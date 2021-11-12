@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.Controller">
+   <children>
+      <StackPane layoutX="258.0" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="258.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="pnlCustomer" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="pnlOrders" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="pnlMenus" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: White;">
+               <children>
+                  <TextField layoutX="590.0" layoutY="47.0" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: White; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+                  <Label layoutX="57.0" layoutY="25.0" text="ITA " textFill="#05071f">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="118.0" prefHeight="90.0" prefWidth="411.0" spacing="50.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="22000" textFill="#2a73ff">
+                                 <font>
+                                    <Font name="System Bold" size="33.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Total" textFill="#05071f">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="1500" textFill="#26bfbc">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Sub Total" textFill="#05071f">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="86.0" prefWidth="100.0">
+                           <children>
+                              <Label text="1000" textFill="#fa5f7e">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Cliente" textFill="#05071f">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="11.0" layoutY="254.0" prefHeight="42.0" prefWidth="746.0" spacing="80.0" style="-fx-background-color: White;">
+                     <children>
+                        <Label text="Código" textFill="#05071f">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Descrição" textFill="#05071f">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Quantidade" textFill="#05071f">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Peço unitário" textFill="#05071f">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ScrollPane layoutX="14.0" layoutY="335.0" prefHeight="397.0" prefWidth="1070.0" stylesheets="@style.css">
+                     <content>
+                        <VBox fx:id="pnItems" prefHeight="460.0" prefWidth="1070.0" spacing="5.0" style="-fx-background-color: #f5f5f5;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="749.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Search_52px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+   <effect>
+      <DropShadow color="#1b1eeb" />
+   </effect>
+</AnchorPane>
