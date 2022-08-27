@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -14,6 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" style="-fx-background-color: WHITE;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.Controller">
@@ -22,12 +20,19 @@
          <children>
             <Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="1072.0" style="-fx-background-color: White;">
                <children>
-                  <TextField fx:id="textFieldPesquisaProduto" layoutX="590.0" layoutY="47.0" onAction="#pesquisaProduto" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: White; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
+                  <TextField layoutX="590.0" layoutY="47.0" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-background-color: White; -fx-border-color: #B7C3D7; -fx-border-radius: 2em;" />
                   <Label layoutX="57.0" layoutY="25.0" text="ITA " textFill="#05071f">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Label>
+                  <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="118.0" prefHeight="90.0" prefWidth="411.0" spacing="50.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+                        <VBox alignment="CENTER" prefHeight="86.0" prefWidth="100.0" />
+                     </children>
+                  </HBox>
                   <HBox alignment="CENTER_LEFT" layoutX="11.0" layoutY="254.0" prefHeight="42.0" prefWidth="746.0" spacing="80.0" style="-fx-background-color: White;" />
                   <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="749.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -41,18 +46,6 @@
                         <TableColumn fx:id="precoUnitarioTabelaProdutos" prefWidth="111.0" text="Preço Unitário" />
                      </columns>
                   </TableView>
-                  <RadioButton fx:id="radioCodigo" layoutX="227.0" layoutY="52.0" mnemonicParsing="false" text="Código">
-                     <toggleGroup>
-                        <ToggleGroup fx:id="tipoPesquisaProduto" />
-                     </toggleGroup>
-                  </RadioButton>
-                  <RadioButton fx:id="radioDescricao" layoutX="319.0" layoutY="53.0" mnemonicParsing="false" selected="true" text="Descrição">
-                     <toggleGroup>
-                        <ToggleGroup fx:id="tipoPesquisaProduto1" />
-                     </toggleGroup>
-                  </RadioButton>
-                  <Label layoutX="411.0" layoutY="53.0" text="Quantidade:" />
-                  <Spinner fx:id="spinnerQdt" editable="true" initialValue="1" layoutX="489.0" layoutY="49.0" max="999" min="1" onKeyPressed="#eventoQtdSpinner" prefHeight="25.0" prefWidth="88.0" />
                </children>
             </Pane>
          </children>
